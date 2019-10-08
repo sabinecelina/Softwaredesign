@@ -5,5 +5,7 @@ public class Task {
 
     static void Main() {
           Console.WriteLine(i);  
+          Console.WriteLine(pi);  
+          Console.WriteLine(salute);  
     }
 }   
