@@ -1,28 +1,25 @@
-public class Letter 
-{
-    static void Main(string[] args)
-        {
-            Console.WriteLine("Bitte einen kleinen Satz eingeben");
-            Console.Write("> ");
-            var text = Console.ReadLine();
-            string letters = reverseLetters(text);
-            string words = reverseWords(text);
-            string sentence = reverseSentence(text);
-            Console.WriteLine(sentence + "\n" + words + "\n" + letters);
-        }
-    public string reverseLetters(string text)
-    {
-        return text.Reverse();
-    }
+using System;
 
-    public string reverseWords(string text)
+    class Program
     {
-        for( i = 0; i<text.length(); i++)
+        static void Main(string[] args)
         {
-
+            //Console.WriteLine("Bitte einen kleinen Satz eingeben");
+            //Console.Write("> ");
+            string text = "Ich liebe Käse";
+            string letters = ReverseLetters(text);
+            //string words = ReverseWords(text);
+            //string sentence = ReverseSentence(text);
+            Console.WriteLine(text + "\n" + sentence + "\n" + words + "\n" + letters);
         }
 
-    return text;
-    }
+        static string ReverseLetters(string text)
+        {
+            // I create an array with chars of the sentence in it and reverse the array with the c# function: Reverse
+
+            char [] letters = text.ToCharArray();
+            Array.Reverse(letters);
+            return new String(letters);
+        }
 
 }
