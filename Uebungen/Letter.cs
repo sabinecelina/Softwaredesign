@@ -33,5 +33,13 @@ using System;
             string wordsreversed = string.Join(" ", words);
             return wordsreversed;
         }
+        
+        static string ReverseSentence(string text)
+        {
+            //first I reverse the letters than i reverse the words
+
+            text = ReverseLetters(text);
+            return ReverseWords(text);
+        }
 
 }
