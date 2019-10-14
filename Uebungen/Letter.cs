@@ -21,5 +21,17 @@ using System;
             Array.Reverse(letters);
             return new String(letters);
         }
+                static string ReverseWords(string text)
+        {
+            //I create a string array, split every word when it has a blank and reverse the array with the function: Reverse
+
+            string [] words = text.Split(" ");
+            Array.Reverse(words);
+
+            //convert array to string with string.join
+
+            string wordsreversed = string.Join(" ", words);
+            return wordsreversed;
+        }
 
 }
