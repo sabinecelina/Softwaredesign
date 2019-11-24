@@ -1,5 +1,10 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Diagnostics;
+
 
 namespace Quiz
 {
@@ -7,12 +12,14 @@ namespace Quiz
     {
         public List<Quizelement> quizelemente = new List<Quizelement>()
         {
-            new QuizelementGuess("wie viele Einwohner hat die Mongolei in Millionen??", 3 , 0.2f),
+            new QuizelementGuess("wie viele Einwohner hat die Mongolei in Millionen??", 3f , 0.2f),
             new QuizelementSingleChoice("Wie viele Weihnachtsbäume werden in Deutschland pro Jahr verkauft?", new List<Answer> {new Answer(true, "10 Millionen"), new Answer(false, "20 Millionen"), new Answer(false, "30 Millionen")}),
             new QuizelementSingleChoice("Welcher deutsche Bundeskanzler erhielt den Friedensnobelpreis?", new List<Answer> {new Answer(true, "Willy Brandt"),new Answer(false,"Konrad Adenauer"), new Answer(false,"Helmut Schmidt"), new Answer(false,"Helmut Kohl")}),
-            new QuizelementMultipleChoice("Wer war Franz Kafka?", new List<Answer> {new Answer(true, "Schriftsteller"),new Answer(false,"Sänger"), new Answer(false,"Schauspieler"), new Answer(true,"Mensch")})
+            new QuizelementMultipleChoice("Wer war Franz Kafka?", new List<Answer> {new Answer(true, "Schriftsteller"),new Answer(false,"Sänger"), new Answer(false,"Schauspieler"), new Answer(true,"Mensch")}),
+            new QuizelementText("Wie bezeichnet man Briefmarkensammler? ", new Answer(true, "Philatelisten"))
         };
-        public int score;
+        public int score = 0;
+        public static int questionnumber = 0;
         public AddQuizelement addQuizelement = new AddQuizelement();
         public static Menu menumenu = new Menu();
 
@@ -38,11 +45,29 @@ namespace Quiz
                 }
                 else if (x == 2)
                 {
-                    //TODO
+                    menumenu.quizelemente[questionnumber].display();
+                    string console = Console.ReadLine();
+                    bool check = menumenu.quizelemente[questionnumber].checkAnswers(console);
+                    if (check == true)
+                    {
+                        number += 1;
+                        questionnumber += 1;
+                        Console.WriteLine("Your Answer is correct!");
+                        Console.WriteLine("___________________________ \n");
+                    }
+                    else
+                    {
+                        questionnumber += 1;
+                        Console.WriteLine("Your Answer is not correct!");
+                        Console.WriteLine("___________________________ \n");
+                    }
+                    Console.WriteLine("your score: " + menumenu.score);
+                    Console.WriteLine("previously answered questions:  " + questionnumber);
+                    menu();
                 }
                 else if (x == 3)
                 {
-                    //TODO
+                    Debugger.Break();
                 }
             }
             catch
@@ -50,6 +75,14 @@ namespace Quiz
                 Console.WriteLine("Die Eingabe war ungültig, bitte versuchen Sie es erneut");
                 menu();
             }
+        }
+        public static void writeIt(List<String> liste)
+        {
+            foreach (String s in liste)
+            {
+                Console.WriteLine(s);
+            }
+            Console.WriteLine(".....");
         }
         public void playQuiz()
         {
@@ -83,7 +116,6 @@ namespace Quiz
                     break;
                 case 5:
                     quizelemente.Add(addQuizelement.addQuizelementMultipleChoice());
-                    Console.WriteLine("Case 1");
                     break;
                 case 6:
                     menu();

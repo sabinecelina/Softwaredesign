@@ -13,11 +13,25 @@ namespace Quiz
         }
         public override void display()
         {
-
+            Console.WriteLine(question);
+            Console.WriteLine("You have several correct answers. Please enter your answers like: xx,xx");
+            for (int i = 0; i < answer.Count; i++)
+            {
+                Console.WriteLine(i + ". " + answer[i].text);
+            }
         }
-        public override Boolean checkAnswers(string answer)
+        public override Boolean checkAnswers(string answers)
         {
-            return true;
+            bool save = false;
+            string[] number = answers.Split(',');
+            foreach (Answer allanswers in answer)
+            {
+                if (answers == allanswers.text)
+                    save = true;
+                else
+                    save = false;
+            }
+            return save;
         }
     }
 }

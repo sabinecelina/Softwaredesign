@@ -7,7 +7,7 @@ namespace Quiz
     {
         public QuizelementText addQuizelementText()
         {
-            QuizelementText quizelement = new QuizelementText();
+            QuizelementText quizelement = new QuizelementText("", new Answer(false, ""));
             Console.WriteLine("Please enter your Question: ");
             Console.WriteLine("> ");
             quizelement.question = Console.ReadLine();
@@ -18,7 +18,7 @@ namespace Quiz
         }
         public QuizelementTrueFalse addQuizelementTrueFalse()
         {
-            QuizelementTrueFalse quizelement = new QuizelementTrueFalse();
+            QuizelementTrueFalse quizelement = new QuizelementTrueFalse("", false);
             Console.WriteLine("Please enter your Question: ");
             Console.WriteLine("> ");
             quizelement.question = Console.ReadLine();
@@ -32,7 +32,7 @@ namespace Quiz
         }
         public QuizelementGuess addQuizelementGuess()
         {
-            QuizelementGuess quizelement = new QuizelementGuess();
+            QuizelementGuess quizelement = new QuizelementGuess("", 0.0f, 0.0f);
             Console.WriteLine("Please enter your Question: ");
             Console.WriteLine("> ");
             quizelement.question = Console.ReadLine();
@@ -49,7 +49,7 @@ namespace Quiz
         }
         public QuizelementMultipleChoice addQuizelementMultipleChoice()
         {
-            QuizelementMultipleChoice quizelement = new QuizelementMultipleChoice();
+            QuizelementMultipleChoice quizelement = new QuizelementMultipleChoice("", new List<Answer> { new Answer(false, ""), new Answer(false, "")});
             List<Answer> answers = new List<Answer>();
             Answer correctanswer = new Answer(false, "");
             Answer wronganswer = new Answer(false, "");
@@ -91,7 +91,7 @@ namespace Quiz
         }
         public QuizelementSingleChoice addQuizelementSingleChoice()
         {
-            QuizelementSingleChoice quizelement = new QuizelementSingleChoice();
+            QuizelementSingleChoice quizelement = new QuizelementSingleChoice("", new List<Answer> { new Answer(false, ""), new Answer(false, "") });
             List<Answer> answers = new List<Answer>();
             Answer correctanswer = new Answer(false, "");
             Answer wronganswer = new Answer(false, "");

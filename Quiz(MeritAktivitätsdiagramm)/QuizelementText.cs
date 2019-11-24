@@ -7,23 +7,22 @@ namespace Quiz
     {
         public Answer answer;
 
+        public QuizelementText(string question, Answer answer)
+        {
+            this.question = question;
+            this.answer = answer;
+        }
         public override void display()
         {
             Console.WriteLine(question);
-            Console.WriteLine("Please enter the correct answer");
+            Console.WriteLine("Please enter the correct answer - pay attention to uppercase and lowercase");
         }
         public override Boolean checkAnswers(string answer)
         {
             if (answer == this.answer.text)
-            {
-                Console.WriteLine("Your Answer is correct!");
                 return true;
-            }
             else
-            {
-                Console.WriteLine("Your Answer is not correct!");
                 return false;
-            }
         }
     }
 }
