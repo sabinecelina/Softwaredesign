@@ -1,23 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Valentin Wunsch\\Desktop\\Sabine\\Softwaredesign-Debug\\Quiz\\Quiz.csproj": {}
+    "C:\\Users\\Sabine Schleise\\Desktop\\Softwaredesign\\Quiz\\Quiz.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Valentin Wunsch\\Desktop\\Sabine\\Softwaredesign-Debug\\Quiz\\Quiz.csproj": {
+    "C:\\Users\\Sabine Schleise\\Desktop\\Softwaredesign\\Quiz\\Quiz.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Valentin Wunsch\\Desktop\\Sabine\\Softwaredesign-Debug\\Quiz\\Quiz.csproj",
+        "projectUniqueName": "C:\\Users\\Sabine Schleise\\Desktop\\Softwaredesign\\Quiz\\Quiz.csproj",
         "projectName": "Quiz",
-        "projectPath": "C:\\Users\\Valentin Wunsch\\Desktop\\Sabine\\Softwaredesign-Debug\\Quiz\\Quiz.csproj",
-        "packagesPath": "C:\\Users\\Valentin Wunsch\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Valentin Wunsch\\Desktop\\Sabine\\Softwaredesign-Debug\\Quiz\\obj\\",
+        "projectPath": "C:\\Users\\Sabine Schleise\\Desktop\\Softwaredesign\\Quiz\\Quiz.csproj",
+        "packagesPath": "C:\\Users\\Sabine Schleise\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Sabine Schleise\\Desktop\\Softwaredesign\\Quiz\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Valentin Wunsch\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Sabine Schleise\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.0"
@@ -53,7 +50,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }

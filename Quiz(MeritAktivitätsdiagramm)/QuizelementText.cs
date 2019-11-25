@@ -15,7 +15,7 @@ namespace Quiz
         public override void display()
         {
             Console.WriteLine(question);
-            Console.WriteLine("Please enter the correct answer - pay attention to uppercase and lowercase");
+            Console.WriteLine("Please enter the correct answer - pay attention to uppercase, lowercase and space");
         }
         public override Boolean checkAnswers(string answer)
         {

@@ -1,5 +1,9 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Diagnostics;
 
 namespace Quiz
 {
@@ -17,19 +21,28 @@ namespace Quiz
             Console.WriteLine("You have several correct answers. Please enter your answers like: xx,xx");
             for (int i = 0; i < answer.Count; i++)
             {
-                Console.WriteLine(i + ". " + answer[i].text);
+                Console.WriteLine((i + 1) + ". " + answer[i].text);
             }
         }
         public override Boolean checkAnswers(string answers)
         {
             bool save = false;
-            string[] number = answers.Split(',');
-            foreach (Answer allanswers in answer)
+            string[] text = answers.Split(',');
+            int[] number = new int[] { };
+            for (int i = 0; i < number.Count(); i++)
             {
-                if (answers == allanswers.text)
-                    save = true;
-                else
-                    save = false;
+                number[i] = Int32.Parse(text[i]);
+            }
+            for (int i = 0; i < number.Count(); i++)
+            {
+                foreach (Answer allanswers in answer)
+                {
+
+                    if (answer[number[i - 1]].isTrue == true)
+                        save = true;
+                    else
+                        save = false;
+                }
             }
             return save;
         }

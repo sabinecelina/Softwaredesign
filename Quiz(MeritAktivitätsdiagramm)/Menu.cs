@@ -18,7 +18,7 @@ namespace Quiz
             new QuizelementMultipleChoice("Wer war Franz Kafka?", new List<Answer> {new Answer(true, "Schriftsteller"),new Answer(false,"Sänger"), new Answer(false,"Schauspieler"), new Answer(true,"Mensch")}),
             new QuizelementText("Wie bezeichnet man Briefmarkensammler? ", new Answer(true, "Philatelisten"))
         };
-        public int score = 0;
+        public static int score = 0;
         public static int questionnumber = 0;
         public AddQuizelement addQuizelement = new AddQuizelement();
         public static Menu menumenu = new Menu();
@@ -30,9 +30,9 @@ namespace Quiz
         public static void menu()
         {
             Console.WriteLine("Please choose beetween: ");
-            Console.WriteLine("1. add a new Question");
-            Console.WriteLine("2. answer a question");
-            Console.WriteLine("3. exit game");
+            Console.WriteLine("Press 1 to play the quiz");
+            Console.WriteLine("Press two to add a quizelement");
+            Console.WriteLine("Press three to exit the game");
             string number = Console.ReadLine();
             int x = 0;
             x = Int32.Parse(number);
@@ -40,29 +40,19 @@ namespace Quiz
             {
                 if (x == 1)
                 {
-                    menumenu.addQuestion();
-                    menu();
+                    menumenu.playQuiz();
+                    Console.WriteLine("If you want to continue the quiz press 1, if you want to go back to the menu press 2");
+                    Console.WriteLine("> ");
+                    var text = Console.ReadLine();
+                    int numberfromtext = Int32.Parse(text);
+                    if (numberfromtext == 1)
+                        menumenu.playQuiz();
+                    else if (numberfromtext == 2)
+                        menu();
                 }
                 else if (x == 2)
                 {
-                    menumenu.quizelemente[questionnumber].display();
-                    string console = Console.ReadLine();
-                    bool check = menumenu.quizelemente[questionnumber].checkAnswers(console);
-                    if (check == true)
-                    {
-                        number += 1;
-                        questionnumber += 1;
-                        Console.WriteLine("Your Answer is correct!");
-                        Console.WriteLine("___________________________ \n");
-                    }
-                    else
-                    {
-                        questionnumber += 1;
-                        Console.WriteLine("Your Answer is not correct!");
-                        Console.WriteLine("___________________________ \n");
-                    }
-                    Console.WriteLine("your score: " + menumenu.score);
-                    Console.WriteLine("previously answered questions:  " + questionnumber);
+                    menumenu.addQuestion();
                     menu();
                 }
                 else if (x == 3)
@@ -72,21 +62,31 @@ namespace Quiz
             }
             catch
             {
-                Console.WriteLine("Die Eingabe war ungültig, bitte versuchen Sie es erneut");
+                Console.WriteLine("invalid input,  please try it again");
                 menu();
             }
         }
-        public static void writeIt(List<String> liste)
-        {
-            foreach (String s in liste)
-            {
-                Console.WriteLine(s);
-            }
-            Console.WriteLine(".....");
-        }
         public void playQuiz()
         {
-
+            menumenu.quizelemente[questionnumber].display();
+            string console = Console.ReadLine();
+            bool check = menumenu.quizelemente[questionnumber].checkAnswers(console);
+            if (check == true)
+            {
+                score += 1;
+                questionnumber += 1;
+                Console.WriteLine("Your Answer is correct!");
+                Console.WriteLine("___________________________ \n");
+            }
+            else
+            {
+                questionnumber += 1;
+                Console.WriteLine("Your Answer is not correct!");
+                Console.WriteLine("___________________________ \n");
+            }
+            Console.WriteLine("your score: " + score);
+            Console.WriteLine("previously answered questions:  " + questionnumber);
+            Console.WriteLine("___________________________ \n");
         }
         public void addQuestion()
         {
