@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Diagnostics;
+using Newtonsoft.Json;
 
 
 namespace Quiz
@@ -26,6 +27,10 @@ namespace Quiz
         public static void Main()
         {
             menu();
+        }
+        public void QuizelementQuestion()
+        {
+
         }
         public static void menu()
         {

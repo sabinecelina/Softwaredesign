@@ -9,3 +9,14 @@ C:\Users\Sabine Schleise\Desktop\Softwaredesign\Quiz\obj\Debug\netcoreapp3.0\Qui
 C:\Users\Sabine Schleise\Desktop\Softwaredesign\Quiz\obj\Debug\netcoreapp3.0\Quiz.AssemblyInfo.cs
 C:\Users\Sabine Schleise\Desktop\Softwaredesign\Quiz\obj\Debug\netcoreapp3.0\Quiz.dll
 C:\Users\Sabine Schleise\Desktop\Softwaredesign\Quiz\obj\Debug\netcoreapp3.0\Quiz.pdb
+C:\Users\Sabine Schleise\Desktop\Softwaredesign\Quiz(MeritAktivitätsdiagramm)\bin\Debug\netcoreapp3.0\Quiz.exe
+C:\Users\Sabine Schleise\Desktop\Softwaredesign\Quiz(MeritAktivitätsdiagramm)\bin\Debug\netcoreapp3.0\Quiz.deps.json
+C:\Users\Sabine Schleise\Desktop\Softwaredesign\Quiz(MeritAktivitätsdiagramm)\bin\Debug\netcoreapp3.0\Quiz.runtimeconfig.json
+C:\Users\Sabine Schleise\Desktop\Softwaredesign\Quiz(MeritAktivitätsdiagramm)\bin\Debug\netcoreapp3.0\Quiz.runtimeconfig.dev.json
+C:\Users\Sabine Schleise\Desktop\Softwaredesign\Quiz(MeritAktivitätsdiagramm)\bin\Debug\netcoreapp3.0\Quiz.dll
+C:\Users\Sabine Schleise\Desktop\Softwaredesign\Quiz(MeritAktivitätsdiagramm)\bin\Debug\netcoreapp3.0\Quiz.pdb
+C:\Users\Sabine Schleise\Desktop\Softwaredesign\Quiz(MeritAktivitätsdiagramm)\obj\Debug\netcoreapp3.0\Quiz.csprojAssemblyReference.cache
+C:\Users\Sabine Schleise\Desktop\Softwaredesign\Quiz(MeritAktivitätsdiagramm)\obj\Debug\netcoreapp3.0\Quiz.AssemblyInfoInputs.cache
+C:\Users\Sabine Schleise\Desktop\Softwaredesign\Quiz(MeritAktivitätsdiagramm)\obj\Debug\netcoreapp3.0\Quiz.AssemblyInfo.cs
+C:\Users\Sabine Schleise\Desktop\Softwaredesign\Quiz(MeritAktivitätsdiagramm)\obj\Debug\netcoreapp3.0\Quiz.dll
+C:\Users\Sabine Schleise\Desktop\Softwaredesign\Quiz(MeritAktivitätsdiagramm)\obj\Debug\netcoreapp3.0\Quiz.pdb

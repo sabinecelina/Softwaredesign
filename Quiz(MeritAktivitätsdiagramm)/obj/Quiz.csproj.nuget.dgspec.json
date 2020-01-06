@@ -1,25 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Sabine Schleise\\Desktop\\Softwaredesign\\Quiz\\Quiz.csproj": {}
+    "C:\\Users\\Sabine Schleise\\Desktop\\Softwaredesign\\Quiz(MeritAktivitätsdiagramm)\\Quiz.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Sabine Schleise\\Desktop\\Softwaredesign\\Quiz\\Quiz.csproj": {
+    "C:\\Users\\Sabine Schleise\\Desktop\\Softwaredesign\\Quiz(MeritAktivitätsdiagramm)\\Quiz.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Sabine Schleise\\Desktop\\Softwaredesign\\Quiz\\Quiz.csproj",
+        "projectUniqueName": "C:\\Users\\Sabine Schleise\\Desktop\\Softwaredesign\\Quiz(MeritAktivitätsdiagramm)\\Quiz.csproj",
         "projectName": "Quiz",
-        "projectPath": "C:\\Users\\Sabine Schleise\\Desktop\\Softwaredesign\\Quiz\\Quiz.csproj",
+        "projectPath": "C:\\Users\\Sabine Schleise\\Desktop\\Softwaredesign\\Quiz(MeritAktivitätsdiagramm)\\Quiz.csproj",
         "packagesPath": "C:\\Users\\Sabine Schleise\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Sabine Schleise\\Desktop\\Softwaredesign\\Quiz\\obj\\",
+        "outputPath": "C:\\Users\\Sabine Schleise\\Desktop\\Softwaredesign\\Quiz(MeritAktivitätsdiagramm)\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Sabine Schleise\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Sabine Schleise\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -35,6 +37,12 @@
       },
       "frameworks": {
         "netcoreapp3.0": {
+          "dependencies": {
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "(, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -50,7 +58,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
         }
       }
     }
