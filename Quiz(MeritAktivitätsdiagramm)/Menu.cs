@@ -26,28 +26,7 @@ namespace Quiz
 
         public static void Main()
         {
-            menumenu.readQuestions();
             menu();
-        }
-        public void readQuestions()
-        {
-            readQuizSingleChoiceJ();
-        }
-        private void readQuizSingleChoiceJ()
-        {
-            string path = "https://github.com/sabinecelina/Softwaredesign/blob/master/Quiz(MeritAktivit%C3%A4tsdiagramm)/Json/QuizelementTrueFalse.json";
-            List<QuizelementTrueFalse> quizList = new List<QuizelementTrueFalse>();
-
-            using (StreamReader r = new StreamReader(path))
-            {
-                string json = r.ReadToEnd();
-                quizList = JsonConvert.DeserializeObject<List<QuizelementTrueFalse>>(json);
-            }
-
-            foreach (QuizelementTrueFalse element in quizList)
-            {
-                quizelemente.Add(element);
-            }
         }
     public static void menu()
     {

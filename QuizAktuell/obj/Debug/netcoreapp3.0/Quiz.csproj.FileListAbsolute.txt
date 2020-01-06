@@ -1,0 +1,13 @@
+C:\Users\Sabine Schleise\Desktop\Softwaredesign\QuizAktuell\bin\Debug\netcoreapp3.0\Quiz.exe
+C:\Users\Sabine Schleise\Desktop\Softwaredesign\QuizAktuell\bin\Debug\netcoreapp3.0\Quiz.deps.json
+C:\Users\Sabine Schleise\Desktop\Softwaredesign\QuizAktuell\bin\Debug\netcoreapp3.0\Quiz.runtimeconfig.json
+C:\Users\Sabine Schleise\Desktop\Softwaredesign\QuizAktuell\bin\Debug\netcoreapp3.0\Quiz.runtimeconfig.dev.json
+C:\Users\Sabine Schleise\Desktop\Softwaredesign\QuizAktuell\bin\Debug\netcoreapp3.0\Quiz.dll
+C:\Users\Sabine Schleise\Desktop\Softwaredesign\QuizAktuell\bin\Debug\netcoreapp3.0\Quiz.pdb
+C:\Users\Sabine Schleise\Desktop\Softwaredesign\QuizAktuell\bin\Debug\netcoreapp3.0\Newtonsoft.Json.dll
+C:\Users\Sabine Schleise\Desktop\Softwaredesign\QuizAktuell\obj\Debug\netcoreapp3.0\Quiz.csprojAssemblyReference.cache
+C:\Users\Sabine Schleise\Desktop\Softwaredesign\QuizAktuell\obj\Debug\netcoreapp3.0\Quiz.AssemblyInfoInputs.cache
+C:\Users\Sabine Schleise\Desktop\Softwaredesign\QuizAktuell\obj\Debug\netcoreapp3.0\Quiz.AssemblyInfo.cs
+C:\Users\Sabine Schleise\Desktop\Softwaredesign\QuizAktuell\obj\Debug\netcoreapp3.0\Quiz.csproj.CopyComplete
+C:\Users\Sabine Schleise\Desktop\Softwaredesign\QuizAktuell\obj\Debug\netcoreapp3.0\Quiz.dll
+C:\Users\Sabine Schleise\Desktop\Softwaredesign\QuizAktuell\obj\Debug\netcoreapp3.0\Quiz.pdb
