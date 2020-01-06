@@ -20,3 +20,5 @@ C:\Users\Sabine Schleise\Desktop\Softwaredesign\Quiz(MeritAktivitätsdiagramm)\o
 C:\Users\Sabine Schleise\Desktop\Softwaredesign\Quiz(MeritAktivitätsdiagramm)\obj\Debug\netcoreapp3.0\Quiz.AssemblyInfo.cs
 C:\Users\Sabine Schleise\Desktop\Softwaredesign\Quiz(MeritAktivitätsdiagramm)\obj\Debug\netcoreapp3.0\Quiz.dll
 C:\Users\Sabine Schleise\Desktop\Softwaredesign\Quiz(MeritAktivitätsdiagramm)\obj\Debug\netcoreapp3.0\Quiz.pdb
+C:\Users\Sabine Schleise\Desktop\Softwaredesign\Quiz(MeritAktivitätsdiagramm)\bin\Debug\netcoreapp3.0\Newtonsoft.Json.dll
+C:\Users\Sabine Schleise\Desktop\Softwaredesign\Quiz(MeritAktivitätsdiagramm)\obj\Debug\netcoreapp3.0\Quiz.csproj.CopyComplete
