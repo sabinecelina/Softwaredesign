@@ -23,10 +23,16 @@ namespace Quiz
             bool correct = false;
             if (answer == "Y")
                 save = true;
+            if (save == true)
+                Console.WriteLine("BliBlaBlub");
             if (save == isTrue)
                 correct = true;
+            if (save == true)
+                Console.WriteLine("BliBlaBlubNummer2");
             else if (save == false)
                 correct = false;
+            if (save == true)
+                Console.WriteLine("BliBlaBlubNummer3");
             return correct;
         }
     }

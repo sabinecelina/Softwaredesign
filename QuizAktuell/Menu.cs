@@ -5,19 +5,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Diagnostics;
 using Newtonsoft.Json;
-using static System.Console;
 using System.IO;
+
 namespace Quiz
 {
     public class Menu
     {
         public List<Quizelement> quizelemente = new List<Quizelement>()
         {
-            new QuizelementGuess("wie viele Einwohner hat die Mongolei in Millionen??", 3f , 0.2f),
-            new QuizelementSingleChoice("Wie viele Weihnachtsbäume werden in Deutschland pro Jahr verkauft?", new List<Answer> {new Answer(true, "10 Millionen"), new Answer(false, "20 Millionen"), new Answer(false, "30 Millionen")}),
-            new QuizelementSingleChoice("Welcher deutsche Bundeskanzler erhielt den Friedensnobelpreis?", new List<Answer> {new Answer(true, "Willy Brandt"),new Answer(false,"Konrad Adenauer"), new Answer(false,"Helmut Schmidt"), new Answer(false,"Helmut Kohl")}),
-            new QuizelementMultipleChoice("Wer war Franz Kafka?", new List<Answer> {new Answer(true, "Schriftsteller"),new Answer(false,"Sänger"), new Answer(false,"Schauspieler"), new Answer(true,"Mensch")}),
-            new QuizelementText("Wie bezeichnet man Briefmarkensammler? ", new Answer(true, "Philatelisten"))
         };
         public static int score = 0;
         public static int questionnumber = 0;
@@ -26,29 +21,27 @@ namespace Quiz
 
         public static void Main()
         {
-            //       menumenu.readQuestions();
+            menumenu.readQuestions();
             menu();
         }
-        /*       public void readQuestions()
-             {
-                 readQuizSingleChoiceJ();
-             }
-           private void readQuizSingleChoiceJ()
-             {
-                 string path = "https://github.com/sabinecelina/Softwaredesign/blob/master/Quiz(MeritAktivit%C3%A4tsdiagramm)/Json/QuizelementTrueFalse.json";
-                 List<QuizelementTrueFalse> quizList = new List<QuizelementTrueFalse>();
+        public void readQuestions()
+        {
+            readQuizSingleChoiceJ();
+        }
+        private void readQuizSingleChoiceJ()
+        {
+            string path = "C:/Json/QuizelementTrueFalseJ.json";
+            List<QuizelementTrueFalse> quizList = new List<QuizelementTrueFalse>();
 
-                 using (StreamReader r = new StreamReader(path))
-                 {
-                     string json = r.ReadToEnd();
-                     quizList = JsonConvert.DeserializeObject<List<QuizelementTrueFalse>>(json);
-                 }
+            using(StreamReader r = new StreamReader(path)){
+                string json = r.ReadToEnd();
+                quizList = JsonConvert.DeserializeObject<List<QuizelementTrueFalse>>(json);
+            }
 
-                 foreach (QuizelementTrueFalse element in quizList)
-                 {
-                     quizelemente.Add(element);
-                 }
-             }*/
+            foreach(QuizelementTrueFalse element in quizList){
+                quizelemente.Add(element);
+            }
+        }
         public static void menu()
         {
             Console.WriteLine("Please choose beetween: ");
@@ -92,7 +85,8 @@ namespace Quiz
         {
             menumenu.quizelemente[questionnumber].display();
             string console = Console.ReadLine();
-            bool check = menumenu.quizelemente[questionnumber].checkAnswers(console);
+            bool check = true;
+            check = quizelemente[0].checkAnswers(console);
             if (check == true)
             {
                 score += 1;
@@ -100,7 +94,7 @@ namespace Quiz
                 Console.WriteLine("Your Answer is correct!");
                 Console.WriteLine("___________________________ \n");
             }
-            else
+            else if(check != true)
             {
                 questionnumber += 1;
                 Console.WriteLine("Your Answer is not correct!");

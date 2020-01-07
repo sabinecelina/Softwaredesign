@@ -1,6 +1,14 @@
+<<<<<<< HEAD
 [
     {
         "Question": "London besitzt die älteste U-Bahn der Welt. Sie wurde bereits 1863 eröffnet.",
         "IsCorrect": true
     }
+=======
+[
+    {
+        "Question": "London besitzt die älteste U-Bahn der Welt. Sie wurde bereits 1863 eröffnet.",
+        "IsCorrect": true
+    }
+>>>>>>> 458c2d397cff3cbbbf76bd77f267b7e23a8e582f
 ]
