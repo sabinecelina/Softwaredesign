@@ -27,7 +27,7 @@ namespace Quiz
             readQuizTrueFalseJson();
             readQuizGuessJson();
             readQuizSingleChoiceJson();
-            readQuizTextJ();
+            readQuizTextJson();
         }
         private void readQuizTrueFalseJson()
         {
@@ -77,7 +77,7 @@ namespace Quiz
             }
         }
 
-        void readQuizTextJ()
+        void readQuizTextJson()
         {
             string pathText = "C:/Json/QuizelementTextJ.json";
             List<QuizelementText> quizList = new List<QuizelementText>();
@@ -93,6 +93,23 @@ namespace Quiz
                 quizelemente.Add(element);
             }
         }
+        /*       void readQuizMultipleChoiceJson()
+                {
+                    string path = "C:/Json/QuizelementMultipleChoiseJ.json";
+                    List<QuizelementMultipleChoice> quizList = new List<QuizelementMultipleChoice>();
+
+                    using (StreamReader r = new StreamReader(path))
+                    {
+                        string json = r.ReadToEnd();
+                        quizList = JsonConvert.DeserializeObject<List<QuizelementMultipleChoice>>(json);
+                    }
+
+                    foreach (QuizelementMultipleChoice element in quizList)
+                    {
+                        quizelemente.Add(element);
+                    }
+                }
+                */
         public static void menu()
         {
             Console.WriteLine("Please choose beetween: ");
@@ -134,13 +151,8 @@ namespace Quiz
         }
         public void playQuiz()
         {
-            Random rnd = new Random();
-
-            int number = rnd.Next(0, quizelemente.Count);
-
-            var currentQuiz = quizelemente.ElementAt(number);
+            var currentQuiz = menumenu.quizelemente[questionnumber];
             currentQuiz.display();
-            Console.WriteLine(">");
             string userInput = Console.ReadLine();
             bool check = currentQuiz.checkAnswers(userInput);
             if (check == true)
