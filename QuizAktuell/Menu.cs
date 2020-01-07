@@ -11,9 +11,7 @@ namespace Quiz
 {
     public class Menu
     {
-        public List<Quizelement> quizelemente = new List<Quizelement>()
-        {
-        };
+        public List<Quizelement> quizelemente = new List<Quizelement>() { };
         public static int score = 0;
         public static int questionnumber = 0;
         public AddQuizelement addQuizelement = new AddQuizelement();
@@ -28,6 +26,8 @@ namespace Quiz
         {
             readQuizTrueFalseJson();
             readQuizGuessJson();
+            readQuizSingleChoiceJson();
+            readQuizTextJ();
         }
         private void readQuizTrueFalseJson()
         {
@@ -50,12 +50,46 @@ namespace Quiz
             string path = "C:/Json/QuizelementGuessJ.json";
             List<QuizelementGuess> quizList = new List<QuizelementGuess>();
 
-            using(StreamReader r = new StreamReader(path)){
+            using (StreamReader r = new StreamReader(path))
+            {
                 string json = r.ReadToEnd();
                 quizList = JsonConvert.DeserializeObject<List<QuizelementGuess>>(json);
             }
 
-            foreach(QuizelementGuess element in quizList){
+            foreach (QuizelementGuess element in quizList)
+            {
+                quizelemente.Add(element);
+            }
+        }
+        private void readQuizSingleChoiceJson()
+        {
+            string path = "C:/Json/QuizelementSingleChoiseJ.json";
+            List<QuizelementSingleChoice> quizList = new List<QuizelementSingleChoice>();
+
+            using (StreamReader r = new StreamReader(path))
+            {
+                string json = r.ReadToEnd();
+                quizList = JsonConvert.DeserializeObject<List<QuizelementSingleChoice>>(json);
+            }
+            foreach (QuizelementSingleChoice element in quizList)
+            {
+                quizelemente.Add(element);
+            }
+        }
+
+        void readQuizTextJ()
+        {
+            string pathText = "C:/Json/QuizelementTextJ.json";
+            List<QuizelementText> quizList = new List<QuizelementText>();
+
+            using (StreamReader r = new StreamReader(pathText))
+            {
+                string json = r.ReadToEnd();
+                quizList = JsonConvert.DeserializeObject<List<QuizelementText>>(json);
+            }
+
+            foreach (QuizelementText element in quizList)
+            {
                 quizelemente.Add(element);
             }
         }
@@ -109,7 +143,6 @@ namespace Quiz
             Console.WriteLine(">");
             string userInput = Console.ReadLine();
             bool check = currentQuiz.checkAnswers(userInput);
-            Console.WriteLine("Deine Mutter ist fett und hasslich");
             if (check == true)
             {
                 score += 1;
