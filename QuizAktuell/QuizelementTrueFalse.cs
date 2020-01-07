@@ -25,13 +25,14 @@ namespace Quiz
                 save = true;
             if (save == true)
                 Console.WriteLine("BliBlaBlub");
-            if (save == isTrue)
-                correct = true;
-            if (save == true)
+            if (isTrue == true)
+                Console.WriteLine("BliBlaBlubNummer2einhalb");
+            correct = true;
+            if (correct == true)
                 Console.WriteLine("BliBlaBlubNummer2");
             else if (save == false)
                 correct = false;
-            if (save == true)
+            if (correct == true)
                 Console.WriteLine("BliBlaBlubNummer3");
             return correct;
         }

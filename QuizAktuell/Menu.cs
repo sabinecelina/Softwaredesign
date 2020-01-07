@@ -33,12 +33,14 @@ namespace Quiz
             string path = "C:/Json/QuizelementTrueFalseJ.json";
             List<QuizelementTrueFalse> quizList = new List<QuizelementTrueFalse>();
 
-            using(StreamReader r = new StreamReader(path)){
+            using (StreamReader r = new StreamReader(path))
+            {
                 string json = r.ReadToEnd();
                 quizList = JsonConvert.DeserializeObject<List<QuizelementTrueFalse>>(json);
             }
 
-            foreach(QuizelementTrueFalse element in quizList){
+            foreach (QuizelementTrueFalse element in quizList)
+            {
                 quizelemente.Add(element);
             }
         }
@@ -83,10 +85,16 @@ namespace Quiz
         }
         public void playQuiz()
         {
-            menumenu.quizelemente[questionnumber].display();
-            string console = Console.ReadLine();
-            bool check = true;
-            check = quizelemente[0].checkAnswers(console);
+            Random rnd = new Random();
+
+            int number = rnd.Next(0, quizelemente.Count);
+
+            var currentQuiz = quizelemente.ElementAt(number);
+            currentQuiz.display();
+            Console.WriteLine(">");
+            string userInput = Console.ReadLine();
+            bool check = currentQuiz.checkAnswers(userInput);
+            Console.WriteLine("Deine Mutter ist fett und hasslich");
             if (check == true)
             {
                 score += 1;
@@ -94,7 +102,7 @@ namespace Quiz
                 Console.WriteLine("Your Answer is correct!");
                 Console.WriteLine("___________________________ \n");
             }
-            else if(check != true)
+            else if (check != true)
             {
                 questionnumber += 1;
                 Console.WriteLine("Your Answer is not correct!");
@@ -140,3 +148,4 @@ namespace Quiz
         }
     }
 }
+

@@ -1,7 +1,7 @@
 {
   "version": 3,
   "targets": {
-    ".NETCoreApp,Version=v3.0": {
+    ".NETCoreApp,Version=v3.1": {
       "Newtonsoft.Json/12.0.3": {
         "type": "package",
         "compile": {
@@ -47,7 +47,7 @@
     }
   },
   "projectFileDependencyGroups": {
-    ".NETCoreApp,Version=v3.0": [
+    ".NETCoreApp,Version=v3.1": [
       "Newtonsoft.Json >= 12.0.3"
     ]
   },
@@ -57,9 +57,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Sabine Schleise\\Desktop\\Softwaredesign\\QuizAktuell\\Quiz.csproj",
-      "projectName": "Quiz",
-      "projectPath": "C:\\Users\\Sabine Schleise\\Desktop\\Softwaredesign\\QuizAktuell\\Quiz.csproj",
+      "projectUniqueName": "C:\\Users\\Sabine Schleise\\Desktop\\Softwaredesign\\QuizAktuell\\QuizAktuell.csproj",
+      "projectName": "QuizAktuell",
+      "projectPath": "C:\\Users\\Sabine Schleise\\Desktop\\Softwaredesign\\QuizAktuell\\QuizAktuell.csproj",
       "packagesPath": "C:\\Users\\Sabine Schleise\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Sabine Schleise\\Desktop\\Softwaredesign\\QuizAktuell\\obj\\",
       "projectStyle": "PackageReference",
@@ -68,14 +68,14 @@
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
-        "netcoreapp3.0"
+        "netcoreapp3.1"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
-        "netcoreapp3.0": {
+        "netcoreapp3.1": {
           "projectReferences": {}
         }
       },
@@ -86,7 +86,7 @@
       }
     },
     "frameworks": {
-      "netcoreapp3.0": {
+      "netcoreapp3.1": {
         "dependencies": {
           "Newtonsoft.Json": {
             "target": "Package",
