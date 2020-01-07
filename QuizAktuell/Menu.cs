@@ -26,9 +26,10 @@ namespace Quiz
         }
         public void readQuestions()
         {
-            readQuizSingleChoiceJ();
+            readQuizTrueFalseJson();
+            readQuizGuessJson();
         }
-        private void readQuizSingleChoiceJ()
+        private void readQuizTrueFalseJson()
         {
             string path = "C:/Json/QuizelementTrueFalseJ.json";
             List<QuizelementTrueFalse> quizList = new List<QuizelementTrueFalse>();
@@ -41,6 +42,20 @@ namespace Quiz
 
             foreach (QuizelementTrueFalse element in quizList)
             {
+                quizelemente.Add(element);
+            }
+        }
+        private void readQuizGuessJson()
+        {
+            string path = "C:/Json/QuizelementGuessJ.json";
+            List<QuizelementGuess> quizList = new List<QuizelementGuess>();
+
+            using(StreamReader r = new StreamReader(path)){
+                string json = r.ReadToEnd();
+                quizList = JsonConvert.DeserializeObject<List<QuizelementGuess>>(json);
+            }
+
+            foreach(QuizelementGuess element in quizList){
                 quizelemente.Add(element);
             }
         }

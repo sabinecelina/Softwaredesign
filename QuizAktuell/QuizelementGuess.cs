@@ -7,6 +7,7 @@ namespace Quiz
     {
         public float tolerance;
         public float correctAnswer;
+        
         public QuizelementGuess(string question, float tolerance, float correctAnswer)
         {
             this.question = question;

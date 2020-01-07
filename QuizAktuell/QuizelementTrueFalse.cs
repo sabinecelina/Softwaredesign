@@ -19,21 +19,15 @@ namespace Quiz
         }
         public override Boolean checkAnswers(string answer)
         {
+            
             bool save = false;
             bool correct = false;
             if (answer == "Y")
                 save = true;
-            if (save == true)
-                Console.WriteLine("BliBlaBlub");
-            if (isTrue == true)
-                Console.WriteLine("BliBlaBlubNummer2einhalb");
-            correct = true;
-            if (correct == true)
-                Console.WriteLine("BliBlaBlubNummer2");
+            if (save == isTrue)
+                correct = true;
             else if (save == false)
                 correct = false;
-            if (correct == true)
-                Console.WriteLine("BliBlaBlubNummer3");
             return correct;
         }
     }
